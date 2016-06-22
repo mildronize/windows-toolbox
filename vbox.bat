@@ -18,11 +18,17 @@ IF "%1"=="ls" GOTO LIST
 IF "%1"=="list" GOTO LIST
 
 :HELP
+ECHO vbox help
 ECHO vbox start [VM Name]
 ECHO vbox stop  [VM Name]
-ECHO To list VM name
-ECHO vbox ls    [VM Name]
-ECHO vbox list  [VM Name]
+ECHO ---
+ECHO # Start and stop with default VM name
+ECHO vbox start
+ECHO vbox stop
+ECHO ---
+ECHO # List virtual machines
+ECHO vbox ls
+ECHO vbox list
 GOTO EXIT
 
 :START
@@ -31,7 +37,7 @@ IF "%2"=="" (
 ) ELSE (
 	SET VmName=%2
 )
-ECHO Starting... %VmName% 
+ECHO Starting... %VmName%
 "%VirtualBoxPath%\VBoxManage.exe" startvm %VmName% --type headless
 GOTO EXIT
 
@@ -41,7 +47,7 @@ IF "%2"=="" (
 ) ELSE (
 	SET VmName=%2
 )
-ECHO Stopping... %VmName% 
+ECHO Stopping... %VmName%
 "%VirtualBoxPath%\VBoxManage.exe" controlvm %VmName% poweroff
 GOTO EXIT
 
