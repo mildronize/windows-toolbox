@@ -1,13 +1,17 @@
 # Windows Toolbox
 
 A List of Utility Script on Windows
-
-## Tools
-- [Cmder](http://cmder.net/) - Better console emulator for Windows (Recommended)
+- [Hotpost](#hotspot)
+- [Vbox](#vbox)
 
 ## Install
 1. Clone this project
 2. Setup variable environment for this project
+
+## Tools
+- [Cmder](http://cmder.net/) - Better console emulator for Windows (Recommended)
+
+
 
 ## Hotspot
 Create, start, and stop Hotspot WiFi
@@ -28,6 +32,7 @@ Start, stop, and list virtual machines by [VirtualBox](https://www.virtualbox.or
 ### Prerequisite
 - Make sure you already installed [VirtualBox](https://www.virtualbox.org/wiki/Downloads) in your computer.
 - Edit `vbox.bat` at the line following
+
   ```
   SET VirtualBoxPath=C:\Program Files\Oracle\VirtualBox
   SET DefaultVmName=md9-dev
